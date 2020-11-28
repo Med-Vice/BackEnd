@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
 
 
+
 const searchNLM = async (searchQuery) => {
     const browser = await puppeteer.launch({
         'args' : [

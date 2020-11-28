@@ -1,4 +1,4 @@
-const xml2js = require('xml2js');
+const parser = require("fast-xml-parser");
 const express = require('express');
 const puppeteer = require('puppeteer-core');
 const searchNLM = require('./searchNLM.js')
@@ -14,9 +14,13 @@ app.get('/search', async (request, response) => {
        const searchQuery = await request.query.searchquery;
         if(searchQuery != null){
             const results = await searchNLM(searchQuery)
+            const newinfo = results.map(item=>{
+                const jsonData = parser.parse(item)
+                return jsonData
+            })
         
                 //Returns a 200 Status OK with Results JSON back to the client.
-                response.status(200).json({data:results});
+                response.status(200).json({data:newinfo});
             
         } 
 

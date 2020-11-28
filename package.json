@@ -21,9 +21,9 @@
   "homepage": "https://github.com/abdimohamud/BackEnd#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "fast-xml-parser": "^3.17.4",
     "nodemon": "^2.0.6",
     "puppeteer": "^5.5.0",
-    "puppeteer-core": "^5.5.0",
-    "xml2js": "^0.4.23"
+    "puppeteer-core": "^5.5.0"
   }
 }
