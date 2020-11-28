@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 const searchNLM = async (searchQuery) => {
 
 
-    try{
+   
 
         const browser = await puppeteer.launch();
     
@@ -18,15 +18,12 @@ const searchNLM = async (searchQuery) => {
                 result.push(el.innerHTML)
             })
              return result
-             
-         });
+           
     
-        await page.screenshot({path: 'example.png'});
+//         await page.screenshot({path: 'example.png'});
         await browser.close();
         return textContent;
-    } catch(err) {
-        console.error(err);
-    }
+  
 };
 
 module.exports = searchNLM;
