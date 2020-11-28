@@ -13,7 +13,7 @@ app.get('/search', async (request, response) => {
    try{
        const searchQuery = await request.query.searchquery;
         if(searchQuery != null){
-            const results =searchNLM(searchQuery)
+            const results = searchNLM(searchQuery)
         
                 //Returns a 200 Status OK with Results JSON back to the client.
                 response.status(200).json({data:results});
