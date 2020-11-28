@@ -11,7 +11,7 @@ app.get('/search', async (request, response) => {
     //request parameter - information about the request coming in
    //response parameter - response object that we can use to send a response
    try{
-       const searchQuery = request.query.searchquery;
+       const searchQuery = await request.query.searchquery;
         if(searchQuery != null){
             const results =searchNLM(searchQuery)
         
@@ -29,7 +29,7 @@ app.get('/search', async (request, response) => {
 //Catches requests made to localhost:3000/
 
 app.get("/", (req, res) => {
-    res.status(200).json({message: "Welcome to the Books API",server: 'up and running!', port: `${process.env.PORT}`, environment: `${process.env.NODE_ENV}`})
+    res.status(200).json({message: "Welcome to the MedVice API",server: 'up and running!', port: `${process.env.PORT}`, environment: `${process.env.NODE_ENV}`})
   });
 
 
