@@ -3,7 +3,7 @@ const express = require('express');
 const puppeteer = require('puppeteer');
 const searchNLM = require('./searchNLM.js')
 const app = express();
-const port = 3000;
+
 
 
 app.get('/search', (request, response) => {
@@ -28,4 +28,4 @@ app.get('/', (req, res) => res.send('Hello World!'));
 
 
 //Initialises the express server on the port 30000
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+module.exports = app;
