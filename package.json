@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/abdimohamud/BackEnd#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "fast-xml-parser": "^3.17.4",
+    "helmet": "^4.2.0",
     "nodemon": "^2.0.6",
     "puppeteer": "^5.5.0",
     "puppeteer-core": "^5.5.0"
