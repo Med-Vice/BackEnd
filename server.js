@@ -13,11 +13,7 @@ app.get('/search', async (request, response) => {
    try{
        const searchQuery = await request.query.searchquery;
         if(searchQuery != null){
-<<<<<<< HEAD
             const results = searchNLM(searchQuery)
-=======
-            const results = await searchNLM(searchQuery)
->>>>>>> acb3812b194461ce9799b20799c3741fa89b9387
         
                 //Returns a 200 Status OK with Results JSON back to the client.
                 response.status(200).json({data:results});
