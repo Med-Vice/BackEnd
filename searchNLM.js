@@ -14,7 +14,7 @@ const searchNLM = async (searchQuery) => {
                  let arr =[] 
                 const info = el.querySelectorAll('content')
                 Array.from(info).forEach(e =>{
-                    if(e.textContent.includes("span")){
+                    if(e.textContent.includes('span')){
                        arr.push(e.textContent) 
                     } else {
                         arr.push(e.outerHTML)
