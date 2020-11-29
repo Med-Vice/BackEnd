@@ -2,7 +2,12 @@ const puppeteer = require('puppeteer');
 
 
 const searchNLM = async (searchQuery) => {
-        const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    'args' : [
+      '--no-sandbox',
+      '--disable-setuid-sandbox'
+    ]
+  });
     
         const page = await browser.newPage();
         await page.goto(`https://wsearch.nlm.nih.gov/ws/query?db=digitalCollections&term=${searchQuery}`);
