@@ -6,7 +6,6 @@ const helmet = require("helmet");
 const puppeteer = require('puppeteer-core');
 const searchNLM = require('./searchNLM.js')
 const app = express();
-app.use(express.json())
 app.use(helmet());
 app.use(cors());
 

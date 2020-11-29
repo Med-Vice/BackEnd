@@ -1,5 +1,5 @@
 {
-  "name": "BackEnd",
+  "name": "backend",
   "version": "1.0.0",
   "description": "Node Backend for Medvice",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/abdimohamud/BackEnd.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Abdi Mohamud",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/abdimohamud/BackEnd/issues"
@@ -27,5 +27,6 @@
     "nodemon": "^2.0.6",
     "puppeteer": "^5.5.0",
     "puppeteer-core": "^5.5.0"
-  }
+  },
+  "devDependencies": {}
 }
