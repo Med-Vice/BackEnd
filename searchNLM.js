@@ -17,7 +17,15 @@ const searchNLM = async (searchQuery) => {
             const result = []
              const res = document.querySelectorAll('document');
              Array.from(res).forEach(function (el) { 
-                result.push(el.innerHTML)
+              const content=el.querySelectorAll('content')
+              let arr = []
+              Array.from(content).forEach(e => {
+                const name ={}
+                name.name = e.attributes[0].textContent
+                name.value= e.outerHTML
+                arr.push(name)
+              })
+                result.push(arr)
             })
              return result
 
