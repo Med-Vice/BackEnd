@@ -22,14 +22,14 @@ app.get('/search', async (request, response) => {
             var options = { trimValues: true, textNodeName : "content",
             ignoreAttributes : true}
             const results = await searchNLM(searchQuery)
-            const newinfo = results.map(item=>{
-                item= parser.parse(item)
-                return item
+            // const newinfo = results.map(item=>{
+            //     item= parser.parse(item)
+            //     return item
             
-            })
+            // })
         
                 //Returns a 200 Status OK with Results JSON back to the client.
-                response.status(200).json({data:newinfo});
+                response.status(200).json({data:results});
             
         } 
 
