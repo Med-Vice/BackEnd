@@ -23,7 +23,7 @@ app.get('/search', async (request, response) => {
             ignoreAttributes : true}
             const results = await searchNLM(searchQuery)
             const newinfo = results.map(item=>{
-                item.map(i=> i.value = parser.parse(i.value, options))
+                item= parser.parse(item)
                 return item
             
             })
