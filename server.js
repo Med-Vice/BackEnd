@@ -19,14 +19,9 @@ app.get('/search', async (request, response) => {
    try{
        const searchQuery = await request.query.searchquery;
         if(searchQuery != null){
-            var options = { trimValues: true, textNodeName : "content",
-            ignoreAttributes : true}
-            const results = await searchNLM(searchQuery)
-            // const newinfo = results.map(item=>{
-            //     item= parser.parse(item)
-            //     return item
             
-            // })
+            const results = await searchNLM(searchQuery)
+            
         
                 //Returns a 200 Status OK with Results JSON back to the client.
                 response.status(200).json({data:results});
